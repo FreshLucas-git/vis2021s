@@ -147,7 +147,7 @@
 					.append('text')
 					 .attr('x', ({x0}) => x0 + 1)
 					 .attr('y', ({y0}) => y0 + 20)
-					 .text(({data}) => data.name)
+					 .text(({data}) => data.name+'月')
 					 .attr('font-size', '1rem')
 					 .attr('fill', 'white')
 				
@@ -159,7 +159,7 @@
 					.append('text')
 					 .attr('x', ({x0}) => x0 + 1)
 					 .attr('y', ({y0}) => y0 + 35)
-					 .text(({data}) => data.value)
+					//  .text(({data}) => data.value)
 					 .attr('font-size', '.9rem')
 					 .attr('fill', 'white')
 					 
@@ -170,7 +170,7 @@
 					.append('text')
 					 .attr('x', ({x0}) => x0 + 1)
 					 .attr('y', ({y0}) => y0 + 50)
-					 .text(({data}) => parseFloat(data.seconds))
+					 .text(({data}) => '結婚數:'+parseFloat(data.seconds)+'人')
 					 .attr('font-size', '.9rem')
 					 .attr('fill', 'white')
 					 
@@ -181,7 +181,7 @@
 					.append('text')
 					 .attr('x', ({x0}) => x0 + 1)
 					 .attr('y', ({y0}) => y0 + 21)
-					 .text(({data}) => data.name)
+					 .text(({data}) => '109年台北市結婚總數統計:'+data.name)
 					 .attr('font-size', '1.1rem')
 					 .attr('fill', 'black')
 					 
@@ -264,7 +264,7 @@
 								const seconds = isNaN(parseInt(i[3])) ? 40 : parseInt(i[3])
 								
 								d3Json.children.find(e => e.name == bossName).children.push({
-									name:  i[1]+'月 ' ,
+									name:  i[1] ,
 									seconds,
 									value: parseFloat(mapping[seconds])
 								})
