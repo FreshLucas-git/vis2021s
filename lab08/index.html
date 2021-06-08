@@ -32,18 +32,18 @@
       .pen {
         fill: none;
         stroke: #4f8fb0;
-        stroke-width: 12;
+        stroke-width: 18;
         stroke-linecap: round;
         stroke-linejoin: round;
 
         stroke-dashoffset: 0;
-        animation-duration: 10s;
+        animation-duration: 8s;
         animation-iteration-count: 1;
         animation-timing-function: ease;
       }
 
   </style>
-    <script src="http://d3js.org/d3.v6.min.js" charset="utf-8"></script> <!-- v6.5.0 -->
+    <script src="https://d3js.org/d3.v6.min.js" charset="utf-8"></script> <!-- v6.5.0 -->
 </head>
 <body>
     <h1>
@@ -85,26 +85,26 @@
           d3.select("#pen-display-area")
             .select("svg")
             .attr("width", 256)
-            .attr("id", "yang")
+            .attr("id", "hsu")
         });
 
-      d3.xml("chen-1.svg")
-        .then(data => {
-          d3.select("#pen-display-area").node().append(data.documentElement)
-          d3.select("#pen-display-area")
-            .selectAll("svg")
-            .attr("width", 256)
-            .attr("id", "chen")
-        });
+      d3.xml("ya-1.svg")
+      .then(data => {
+        d3.select("#pen-display-area").node().append(data.documentElement)
+        d3.select("#pen-display-area")
+          .select("svg")
+          .attr("width", 256)
+          .attr("id", "ya")
+      });
 
-      d3.xml("yu-1.svg")
-        .then(data => {
-          d3.select("#pen-display-area").node().append(data.documentElement)
-          d3.select("#pen-display-area")
-            .selectAll("svg")
-            .attr("width", 256)
-            .attr("id", "yu")
-        });
+      d3.xml("chuan-1.svg")
+      .then(data => {
+        d3.select("#pen-display-area").node().append(data.documentElement)
+        d3.select("#pen-display-area")
+          .select("svg")
+          .attr("width", 256)
+          .attr("id", "chuan")
+      });
     </script>
   </html>
   
