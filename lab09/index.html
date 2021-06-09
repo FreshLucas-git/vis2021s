@@ -29,7 +29,7 @@
       svg text {
         font-size: 40px;
         fill: white;
-		font-weight: bold;
+		    font-weight: bold;
         stroke: black;
         font-family: 'Noto Sans TC', sans-serif;
       }
@@ -67,8 +67,8 @@
     <video
       controls="controls"
       id="video"
-      width="1280px"
-      height="720"
+      width="960"
+      height="540"
       preload="auto"
       onended="document.getElementById('replay').style.display='inline'; document.getElementById('video').style.display='none'; d3.select('#subtitle').remove();"
     >
@@ -83,8 +83,8 @@
       d3.select("body")
         .append("svg")
         .attr("id", "replay")
-        .attr("width", 1280)
-        .attr("height", 720)
+        .attr("width", 960)
+        .attr("height", 540)
         .append("text")
         .text("Replay")
         .attr("x", 640)
@@ -166,8 +166,8 @@
               }
             });
 
-          var w = 1280;
-          var h = 720;
+          var w = 960;
+          var h = 540;
 
           var svg = d3
             .select("body")
