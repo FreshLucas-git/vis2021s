@@ -87,8 +87,8 @@
         .attr("height", 540)
         .append("text")
         .text("Replay")
-        .attr("x", 640)
-        .attr("y", 360)
+        .attr("x", 480)
+        .attr("y", 270)
         .attr("text-anchor", "middle")
         .on("click", function () {
           document.getElementById("video").play();
@@ -118,8 +118,8 @@
           d3.select("#subtitle")
             .append("text")
             .text(mytime)
-            .attr("x", 1100)
-            .attr("y", 60)
+            .attr("x", 20)
+            .attr("y", 50)
             .attr("opacity", 0)
             .transition()
             .duration(1000)
